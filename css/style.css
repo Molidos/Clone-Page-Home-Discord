@@ -51,6 +51,17 @@ button:hover{
     bottom: 0;
 }
 
+.container-menu-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-header-mobile{
+    display: none;
+   
+}
 
 .container-header{
     width: 100%;
@@ -108,6 +119,7 @@ button:hover{
 }
 
 .text-main h1{
+    width: 500px;
     font-size: 80px;
     line-height: 60px;
     font-weight: bold;
@@ -191,7 +203,7 @@ button:hover{
     align-items: center;
 }
 
-.section2{
+.alter_color{
     background-color: #f6f6f6;
 }
 
@@ -360,35 +372,249 @@ footer .center{
 }
 
 @media (max-width:1000px){
+    
+    .menu-header-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .menu-header-desktop{
+        display: none;
+    }
+    /*Main*/
+
+    .bg-background{
+        position: absolute;
+        bottom: 0;
+        margin-left: -900px;
+    }
+    
+    .left-icon-img{
+        display: none;
+    }
+    
+    .right-icon-img{
+        position: absolute;
+        right: -100px;
+        margin-right: 0;
+        bottom: 0;
+    }
+
+        
+    .container-main{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 180px 0 100px 0;
+        position: relative;
+        padding: 100px 60px 180px 60px;
+    }
+
+    .text-main{
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 800px;
+    }
+
+    .text-main p{
+        font-size: 15px;
+        line-height: 30px;
+        margin: 20px 0;
+    }
+
+    .text-main h1{
+        width: 500px;
+        font-size: 70px;
+        text-align: left;
+        line-height: 60px;
+        font-weight: bold;
+        font-family: 'Braah One';
+        
+    }
+
+    .button-main-section{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .button-main-section button{
+        border: 0;
+        padding: 15px 25px;
+        border-radius: 50px;
+        font-size: 18px;
+        margin: 10px 0;
+        display: flex;
+    }
+
+    
+    /*Section1*/
+
     .wrap1, .wrap2{
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .section2 .center{
+    .alter_color .center{
         flex-direction: column;
     }
+    
+    .section1 img{
+        width: 100%;
+        height: 100%;
+    }
 
-    .wrap1, .wrap2 h2{
+    .container-text h2{
         font-size: 30px;
     }
+
+    /*Footer*/
 
     footer{
         padding: 30px;
     }
     .footer-up{
-        padding: 0;
+        width: 100%;
         display: flex;
-        align-items: flex-start;
+        justify-content: space-between;
+        align-items: space-between;
+    }
+
+    .social-footer{
+        width: 50%;
     }
 
     nav.menu-footer{
+        width: 50%;
+    }
+
+    nav.menu-footer ul{
         margin-top: 0;
-        width: 100%;
+        flex-wrap: wrap;
     }
 
     .container-menu-footer{
         width: 50%;
+    }
+}
+
+@media (max-width:800px){
+
+    /*Main*/
+
+    .bg-background{
+        display: none;
+    }
+    
+    .left-icon-img{
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        margin-left: -70px;
+        width: 100%;
+        bottom: 0;
+    }
+    
+    .right-icon-img{
+        display: none;
+    }
+
+        
+    .container-main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding: 50px 0px 380px 30px;
+    }
+
+    .text-main{
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        max-width:none;
+    }
+
+    .text-main p{
+        font-size: 15px;
+        line-height: 30px;
+        margin: 20px 0;
+    }
+
+    .text-main h1{
+        width: 100%;
+        font-size: 40px;
+        text-align: left;
+        line-height: 60px;
+        font-weight: bold;
+        font-family: 'Braah One';
+        
+    }
+
+    .button-main-section{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .button-main-section button{
+        border: 0;
+        padding: 15px 25px;
+        border-radius: 50px;
+        font-size: 18px;
+        margin: 10px 0;
+        display: flex;
+    }
+
+    /*Section1*/
+
+    .wrap1, .wrap2{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .alter_color .center{
+        flex-direction: column;
+    }
+    
+    .section1 img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-text h2{
+        font-size: 30px;
+    }
+
+    /*Footer*/
+    footer{
+        padding: 120px 30px 80px 30px;
+    }
+    .footer-up{
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    nav.menu-footer{
+        margin-top: 30px;
+        gap: 30px;
+    }
+
+    .container-menu-footer{
+        margin-right: 10px;
     }
 }
